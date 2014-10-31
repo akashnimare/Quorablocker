@@ -1,0 +1,19 @@
+{
+  "name": "Quorablocker",
+  "description": "Remove Quora's answer from the feed containing certain words",
+  "version": "0.1.2",
+  "minimum_chrome_version": "20.0.0",
+  "icons": {
+    "48": "img/icon-48.png"
+  },
+  "content_scripts": [
+    {
+        "matches": ["http://*.quora.com/*", "https://*.quora.com/*"],
+        "js": [
+            "lib/jquery.js",
+            "hide.js"
+        ]
+    }
+  ],
+  "manifest_version": 2
+}
